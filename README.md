@@ -7,10 +7,14 @@ types: `resident` and `non resident`
 
 ```
 # adding a new key
-ssh-keygen -t ed25519-sk -O resident -O verify-required -C "Main Key"
+ssh-keygen -t ed25519-sk -O resident -O verify-required -C "Git SSH key"
 
 # adding a new key per app
 ssh-keygen -t ed25519-sk -O resident -O application=ssh:<UID> -C "My Comment"
 #ssh-keygen -t ed25519-sk -O resident -O application=ssh:github -C "My Comment"
 #ssh-keygen -t ed25519-sk -O resident -O application=ssh:homelab -C "My Comment"
+
+# signing key
+# https://developers.yubico.com/SSH/Securing_git_with_SSH_and_FIDO2.html
+ssh-keygen -t ed25519-sk -O resident -O verify-required -C "Git signing key" -f ~/.ssh/id_ed25519_sk_git_signing
 ```
