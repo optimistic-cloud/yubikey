@@ -6,6 +6,24 @@ types: `resident` and `non resident`
 - `non resident` keys need to be known by machine. The knowledge is placed inside small file in `.ssh` directory
 
 ```
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:git -C "Git SSH auth on keychain" -f ~/.ssh/yubikeys/keychain_git_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:git-sign -C "Git SSH sign on keychain" -f ~/.ssh/yubikeys/keychain_git_sign
+
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:git -C "Git SSH auth on backup1" -f ~/.ssh/yubikeys/backup1_git_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:git-sign -C "Git SSH sign on backup1" -f ~/.ssh/yubikeys/backup1_git_sign
+
+# test on github
+ssh -i keychain_git_auth -v git@github.com
+
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/yubikeys/keychain_git_sign.pub
+git config --global commit.gpgSign true
+git config --global tag.forceSignAnnotated true
+git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
+
+# ~/.ssh/allowed_signers
+echo "your.email@example.com namespaces=\"git\" $(cat ~/.ssh/yubikeys/keychain_git_sign.pub)" > ~/.ssh/allowed_signers
+
 # adding a new key
 ssh-keygen -t ed25519-sk -O resident -O verify-required -C "Git SSH key"
 ssh-keygen -t ed25519-sk -O resident -O application=ssh:git -O verify-required -C "Git SSH Key" -f ~/.ssh/id_ed25519_sk_git
