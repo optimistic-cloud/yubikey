@@ -22,7 +22,6 @@ ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:codeb
 ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitlab.com-auth -C "gitlab.com auth on key 1" -f ~/.ssh/yubikeys/1_gitlab.com_auth
 ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitlab.com-sign -C "gitlab.com sign on key 1" -f ~/.ssh/yubikeys/1_gitlab.com_sign
 
-
 # test on github
 ssh -i keychain_git_auth -v git@github.com
 
