@@ -7,20 +7,20 @@ types: `resident` and `non resident`
 
 ```
 # github
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github.com-auth -C "github.com auth" -f ~/.ssh/yubikeys/1_github.com_auth
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github.com-sign -C "github.com sign" -f ~/.ssh/yubikeys/1_github.com_sign
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github.com-auth -C "1 github.com auth" -f ~/.ssh/yubikeys/1_github.com_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github.com-sign -C "1 github.com sign" -f ~/.ssh/yubikeys/1_github.com_sign
 
 # gitea
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitea.optimistic.cloud-auth -C "gitea.optimistic.cloud auth" -f ~/.ssh/yubikeys/1_gitea.optimistic.cloud_auth
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitea.optimistic.cloud-sign -C "gitea.optimistic.cloud sign" -f ~/.ssh/yubikeys/1_gitea.optimistic.cloud_sign
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitea.optimistic.cloud-auth -C "1 gitea.optimistic.cloud auth" -f ~/.ssh/yubikeys/1_gitea.optimistic.cloud_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitea.optimistic.cloud-sign -C "1 gitea.optimistic.cloud sign" -f ~/.ssh/yubikeys/1_gitea.optimistic.cloud_sign
 
 # codeberg
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:codeberg.org-auth -C "codeberg.org auth" -f ~/.ssh/yubikeys/1_codeberg.org_auth
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:codeberg.org-sign -C "codeberg.org sign" -f ~/.ssh/yubikeys/1_codeberg.org_sign
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:codeberg.org-auth -C "1 codeberg.org auth" -f ~/.ssh/yubikeys/1_codeberg.org_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:codeberg.org-sign -C "1 codeberg.org sign" -f ~/.ssh/yubikeys/1_codeberg.org_sign
 
 # gitlab
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitlab.com-auth -C "gitlab.com auth" -f ~/.ssh/yubikeys/1_gitlab.com_auth
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitlab.com-sign -C "gitlab.com sign" -f ~/.ssh/yubikeys/1_gitlab.com_sign
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitlab.com-auth -C "1 gitlab.com auth" -f ~/.ssh/yubikeys/1_gitlab.com_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitlab.com-sign -C "1 gitlab.com sign" -f ~/.ssh/yubikeys/1_gitlab.com_sign
 
 
 # test on github
