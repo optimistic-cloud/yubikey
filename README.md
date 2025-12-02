@@ -11,8 +11,8 @@ ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:githu
 ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github.com-sign -C "github.com sign on key 1" -f ~/.ssh/yubikeys/1_github.com_sign
 
 # gitea
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitea.optimistic.cloud-auth -C "gitea.optimistic.cloud auth on key 1" -f ~/.ssh/yubikeys/1_gitea.optimistic.cloud_auth
-ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:gitea.optimistic.cloud-sign -C "gitea.optimistic.cloud sign on key 1" -f ~/.ssh/yubikeys/1_gitea.optimistic.cloud_sign
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:git.optimistic.cloud-auth -C "git.optimistic.cloud auth on key 1" -f ~/.ssh/yubikeys/1_git.optimistic.cloud_auth
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:git.optimistic.cloud-sign -C "git.optimistic.cloud sign on key 1" -f ~/.ssh/yubikeys/1_git.optimistic.cloud_sign
 
 # codeberg
 ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:codeberg.org-auth -C "codeberg.org auth on key 1" -f ~/.ssh/yubikeys/1_codeberg.org_auth
